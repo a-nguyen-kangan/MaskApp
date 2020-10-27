@@ -41,6 +41,8 @@ jobs:
 
 #    - name: Build deployment package
 #     run: zip -r MaskApi-deploy.zip MaskApi
+    - name: Install dotnet EB tools
+      run: dotnet tool install -g Amazon.ElasticBeanstalk.Tools
     
     - name: Deploy to EB
       run: dotnet eb deploy-environment --aws-access-key-id ${{ github.event.inputs.secret_id }} --aws-secret-key ${{ github.event.inputs.secret_key }} --aws-session-token ${{ github.event.inputs.session_token }} -app MaskApi -env MaskApi-Environment --region us-east-1

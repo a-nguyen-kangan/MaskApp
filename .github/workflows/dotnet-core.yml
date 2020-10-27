@@ -9,6 +9,8 @@ on:
         required: true
       session_token:
         required: true
+      example_input:
+        required: false
   
 jobs:
   printInputs:

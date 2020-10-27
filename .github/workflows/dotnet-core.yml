@@ -36,20 +36,11 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
       
-    - name: dotnet Publish
-      run: dotnet publish MaskApi/MaskApi.csproj -c Release -o MaskApi -r linux-x64 --self-contained true
+#    - name: dotnet Publish
+#      run: dotnet publish MaskApi/MaskApi.csproj -c Release -o MaskApi -r linux-x64 --self-contained true
 
-    - name: Build deployment package
-      run: zip -r MaskApi-deploy.zip MaskApi
+#    - name: Build deployment package
+#     run: zip -r MaskApi-deploy.zip MaskApi
     
     - name: Deploy to EB
-      uses: einaregilsson/beanstalk-deploy@v13
-      with:
-        aws_access_key: ${{ github.event.inputs.secret_id }}
-        aws_secret_key: ${{ github.event.inputs.secret_key }}
-        aws_session_token: ${{ github.event.inputs.session_token }}
-        application_name: MaskApi
-        environment_name: MaskApi-Environment
-        version_label: 1234567
-        region: us-east-1
-        deployment_package: MaskApi-deploy.zip
+      run: dotnet eb deploy-environment --aws-access-key-id ${{ github.event.inputs.secret_id }} --aws-secret-key ${{ github.event.inputs.secret_key }} --aws-session-token ${{ github.event.inputs.session_token }} -app MaskApi -env MaskApi-Environment --region us-east-1

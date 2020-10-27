@@ -50,6 +50,6 @@ jobs:
         aws_session_token: ${{ github.event.inputs.session_token }}
         application_name: MaskApi
         environment_name: MaskApi-Environment
-        version_label: 12345
+        version_label: 123456
         region: us-east-1
         deployment_package: MaskApi-deploy.zip

@@ -18,7 +18,7 @@ namespace MaskApi.Controllers
 
             Orders.Add(new Order(new Mask("m-9999", 1, "White", true, false, "Flowers", true, 10.00), 20));
             Orders.Add(new Order(new Mask("m-7777", 1, "Pink", true, false, "Peppa Pig", true, 15.00), 5));
-            Orders.Add(new Order(new Mask("m-8888", 1, "Pink", true, false, "Race Cars", true, 3.50), 5));
+            
         }
 
         [HttpGet("GetAll")]

@@ -52,4 +52,4 @@ jobs:
         environment_name: MaskApi-Environment
         version_label: 12345
         region: us-east-1
-        deployment_package: Mask-deploy.zip
+        deployment_package: MaskApi-deploy.zip

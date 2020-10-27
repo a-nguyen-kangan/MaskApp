@@ -37,7 +37,7 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
       
     - name: dotnet Publish
-      run: dotnet publish MaskApi/MaskApi.csproj -c Release -o MaskApi -r linux-x64
+      run: dotnet publish MaskApi/MaskApi.csproj -c Release -o MaskApi -r linux-x64 --self-contained true
 
     - name: Build deployment package
       run: zip -r MaskApi-deploy.zip MaskApi
@@ -50,6 +50,6 @@ jobs:
         aws_session_token: ${{ github.event.inputs.session_token }}
         application_name: MaskApi
         environment_name: MaskApi-Environment
-        version_label: 123456
+        version_label: 1234567
         region: us-east-1
         deployment_package: MaskApi-deploy.zip

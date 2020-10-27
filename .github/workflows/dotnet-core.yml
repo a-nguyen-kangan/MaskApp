@@ -45,9 +45,9 @@ jobs:
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v13
       with:
-        aws_access_key: ${{ github.events.inputs.secret_id }}
-        aws_secret_key: ${{ github.events.inputs.secret_key }}
-        aws_session_token: ${{ github.events.inputs.session_token }}
+        aws_access_key: ${{ github.event.inputs.secret_id }}
+        aws_secret_key: ${{ github.event.inputs.secret_key }}
+        aws_session_token: ${{ github.event.inputs.session_token }}
         application_name: MaskApi
         environment_name: MaskApi-Environment
         version_label: 12345

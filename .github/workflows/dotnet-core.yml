@@ -11,6 +11,14 @@ on:
         required: true
   
 jobs:
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "id: ${{ github.event.inputs.secret_id }}"
+        echo "key: ${{ github.event.inputs.secret_key }}" 
+        echo "token: ${{ github.event.inputs.session_token }}" 
+
   build:
 
     runs-on: ubuntu-latest

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OcljbpEDejzl1T5N7FT9F4jN1l0ucqfF1MQ8OR6K+ZD5WeqFeNQcbehv6t+7RoFlEMs9JukzAcYzEaGvRb5xtg==",
+  "dgSpecHash": "zpx4EO9ciuOT4x1fXkHUk+BjovZ3Yrqp1Bcxn8/PTSTzXs458LiFk702vHPDjd9Vg3nxX6Mgm38pZohgqfRvoQ==",
   "success": true,
   "projectFilePath": "/Users/anguyen/Projects/CSharp/MaskApp/MaskApi/MaskApi.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/anguyen/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.1.7/microsoft.netcore.app.host.linux-x64.3.1.7.nupkg.sha512"
+  ],
   "logs": []
 }

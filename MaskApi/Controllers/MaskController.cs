@@ -14,6 +14,7 @@ namespace MaskApi.Controllers
             MasksInStock.Add(new Mask("m-8888", 3, "Black", false, true, "RaceCars", true, 3.50));
             MasksInStock.Add(new Mask("m-7777", 1, "Pink", true, false, "Peppa Pig", true, 15.00));
             MasksInStock.Add(new Mask("m-6666", 3, "Yellow", false, true, "Sponge Bob", true, 5.50));
+            MasksInStock.Add(new Mask("m-2222", 1, "Red", false, true, "MAGA", true, 2.50));
         }
 
         [HttpGet("GetAll")]

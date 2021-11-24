@@ -19,6 +19,8 @@ namespace MaskTests
 
         [Fact]
         public void GenerateOrderNoTest() {
+            Assert.True(false);
+            
             Order order1 = new Order(newMask1, 3);
             Order order2 = new Order(newMask2, 10);
 
@@ -28,7 +30,7 @@ namespace MaskTests
             int num4 = order2.GenerateOrderNo();
 
             if(num1 == num2 || num1 == num3 || num1 == num4 || num2 == num3 || num2 == num4 || num3 == num4) {
-                Assert.True(true);
+                Assert.True(false);
             }
 
             if((num1 >= 1000 && num1 <= 9999) && (num2 >= 1000 && num2 <= 9999) && 

@@ -19,8 +19,7 @@ namespace MaskTests
 
         [Fact]
         public void GenerateOrderNoTest() {
-            Assert.True(false);
-            
+ 
             Order order1 = new Order(newMask1, 3);
             Order order2 = new Order(newMask2, 10);
 

@@ -34,5 +34,12 @@ namespace MaskApi.Controllers
             
             return found;
         }
+        
+        [HttpGet("TESTVAR")]
+        public string TestVar() {
+            var str = "";
+            str = Environment.GetEnvironmentVariable("TESTVAR");
+            return str;
+        }
     }
 }

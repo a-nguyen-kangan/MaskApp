@@ -35,10 +35,9 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
-    arguments: '-o MaskApi'
+    arguments: '-output $(Build.ArtifactStagingDirectory)'
 
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
-    artifact: 'MaskApp.zip'
     publishLocation: 'pipeline'

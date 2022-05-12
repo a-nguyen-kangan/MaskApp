@@ -46,10 +46,9 @@ namespace MaskApi.Controllers
         
         [HttpGet("ConnString")]
         public string GetConnString() {
-            var key = "TestString";
-            string value = ConfigurationManager.ConnectionStrings[key].ConnectionString;
-            
-            return value;
+            var str = "";
+            str = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_TestString");
+            return str;
         }
     }
 }

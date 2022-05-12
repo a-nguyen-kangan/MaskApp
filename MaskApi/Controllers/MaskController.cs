@@ -42,5 +42,15 @@ namespace MaskApi.Controllers
             str = Environment.GetEnvironmentVariable("TESTVAR");
             return str;
         }
+        
+        [HttpGet("ConnString")]
+        public string GetConnString() {
+            using System.Configuration;
+
+            var key = "TestString";
+            string value = ConfigurationManager.ConnectionStrings[key].ConnectionString;
+            
+            return value;
+        }
     }
 }

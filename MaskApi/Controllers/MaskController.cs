@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using MaskApi.models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Configuration;
 
 namespace MaskApi.Controllers
 {
@@ -45,8 +46,6 @@ namespace MaskApi.Controllers
         
         [HttpGet("ConnString")]
         public string GetConnString() {
-            using System.Configuration;
-
             var key = "TestString";
             string value = ConfigurationManager.ConnectionStrings[key].ConnectionString;
             
